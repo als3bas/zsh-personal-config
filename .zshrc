@@ -7,11 +7,11 @@ fi
 
 source ~/.zplug/init.zsh
 
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
-zplug "larkery/zsh-histdb"
+zplug "zsh-users/zsh-history-substring-search", as:plugin
+zplug "zsh-users/zsh-syntax-highlighting", as:plugin
+zplug "zsh-users/zsh-autosuggestions", as:plugin
+zplug "zsh-users/zsh-completions", as:plugin
+zplug "larkery/zsh-histdb", as:plugin
 
 zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 zplug "tcnksm/docker-alias", use:zshrc
