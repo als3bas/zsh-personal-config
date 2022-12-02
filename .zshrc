@@ -13,6 +13,7 @@ zplug "zsh-users/zsh-autosuggestions", as:plugin
 zplug "zsh-users/zsh-completions", as:plugin
 zplug "larkery/zsh-histdb", as:plugin
 zplug "jirutka/zsh-shift-select", as:plugin
+zplug "lukechilds/zsh-nvm", as:plugin
 
 zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 zplug "tcnksm/docker-alias", use:zshrc
@@ -20,7 +21,6 @@ zplug "tcnksm/docker-alias", use:zshrc
 #OMZ
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/node",   from:oh-my-zsh
-zplug "plugins/nvm",   from:oh-my-zsh
 
 
 zplug 'romkatv/powerlevel10k', as:theme
