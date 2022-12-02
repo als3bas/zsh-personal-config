@@ -16,7 +16,7 @@ mv .zshrc .zshrc.old
 
 # move zshrc
 echo "📤 Moving .zshrc.new to .zshrc"
-mv .zshrc.new ~/.zshrc --force
+mv .zshrc.new ~/.zshrc -f
 
 # then exec zsh
 echo "🚀 Running  zsh again"
