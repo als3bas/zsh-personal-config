@@ -12,6 +12,7 @@ zplug "zsh-users/zsh-syntax-highlighting", as:plugin
 zplug "zsh-users/zsh-autosuggestions", as:plugin
 zplug "zsh-users/zsh-completions", as:plugin
 zplug "larkery/zsh-histdb", as:plugin
+zplug "jirutka/zsh-shift-select", as:plugin
 
 zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
 zplug "tcnksm/docker-alias", use:zshrc
@@ -40,3 +41,13 @@ zplug load
 export HISTFILE=~/.histfile
 export HISTSIZE=1000000   # the number of items for the internal history list
 export SAVEHIST=1000000   # maximum number of items for the history file
+
+## FIX CTRL + ARROW KEYS
+bindkey "\eOc" forward-word
+bindkey "\eOd" backward-word
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+bindkey "\e[5C" forward-word
+bindkey "\e[5D" backward-word
+bindkey "\e\e[C" forward-word
+bindkey "\e\e[D" backward-word
