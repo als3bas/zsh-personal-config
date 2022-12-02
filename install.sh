@@ -8,7 +8,7 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 
 # download .zshrc 
 echo "📥 Downloading .zshrc from GitHub"
-curl https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.zshrc --output .zshrc.new
+curl -s https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.zshrc --output .zshrc.new
 
 # backup old .zshrc
 echo "📦 Backing up old .zshrc"
