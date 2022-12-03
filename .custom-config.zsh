@@ -1,7 +1,7 @@
-echo "loaded custom config"
+## HIST FILE FIX
 export HISTFILE=~/.histfile
-export HISTSIZE=1000000 
-export SAVEHIST=1000000 
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 ## FIX CTRL + ARROW KEYS
 bindkey "\eOc" forward-word
