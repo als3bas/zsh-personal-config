@@ -5,10 +5,9 @@ My personal zsh config for my systems with zplug
 
 ## Requirements
 * Git
-* Node
 * Zsh (of course)
 
-## Automatic
+## Automatic install and/or update
 ```bash
 curl -sL i.asgg.cl/zsh | bash
 ```
