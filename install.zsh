@@ -4,13 +4,13 @@ cd ~
 
 # install zplug
 echo "📦 Installing zplug"
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+curl -sL --proto-redir -all,https "https://raw.githubusercontent.com/zplug/installer/master/installer.zsh?$RANDOM" | zsh
 
 # download .zshrc & configs
 echo "📥 Downloading zsh assets"
-curl -s --proto-redir -all,https https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.zshrc --output .zshrc.new
+curl -s --proto-redir -all,https "https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.zshrc?$RANDOM" --output .zshrc.new
 echo "📥 Downloading custom config"
-curl -s --proto-redir -all,https https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.custom-config.zsh --output .custom-config.zsh.new
+curl -s --proto-redir -all,https "https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.custom-config.zsh?$RANDOM" --output .custom-config.zsh.new
 
 # backup old .zshrc
 echo "📦 Backing up old files"
