@@ -9,5 +9,5 @@ My personal zsh config for my systems with zplug
 
 ## Automatic install and/or update
 ```bash
-curl -sL i.asgg.cl/zsh | bash
+curl -sL i.asgg.cl/zsh | zsh
 ```
