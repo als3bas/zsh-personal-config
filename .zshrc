@@ -4,7 +4,6 @@ zplug "zsh-users/zsh-history-substring-search", as:plugin
 zplug "zsh-users/zsh-syntax-highlighting", as:plugin
 zplug "zsh-users/zsh-autosuggestions", as:plugin
 zplug "zsh-users/zsh-completions", as:plugin
-zplug "marlonrichert/zsh-autocomplete", as:plugin
 zplug "larkery/zsh-histdb", as:plugin
 zplug "jirutka/zsh-shift-select", as:plugin
 zplug "lukechilds/zsh-nvm", as:plugin
