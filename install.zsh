@@ -30,4 +30,4 @@ mv -f .custom-config.zsh.new ~/.custom-config.zsh
 
 # then exec zsh
 echo "🚀 Running  zsh again"
-exec zsh
+eval "$(starship init zsh)"
