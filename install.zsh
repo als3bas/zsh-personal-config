@@ -29,5 +29,10 @@ mv -f .zshrc.new ~/.zshrc
 mv -f .custom-config.zsh.new ~/.custom-config.zsh
 
 # then exec zsh
-echo "🚀 Running  zsh again"
-eval "$(starship init zsh)"
+echo "🚀 Running zsh again"
+exec zsh
+
+echo "=============================================="
+echo "🤓 RESTART YOUR TERMINAL TO SEE THE CHANGES"
+echo "🤓 OR RUN 'exec zsh' TO SEE THE CHANGES"
+echo "=============================================="
