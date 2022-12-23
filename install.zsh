@@ -6,12 +6,6 @@ cd ~
 echo "📦 Installing zplug"
 curl -sL --proto-redir -all,https "https://raw.githubusercontent.com/zplug/installer/master/installer.zsh?$RANDOM" | zsh
 
-echo "🚀 Install Starhip as sudo"
-curl -sS "https://starship.rs/install.sh?$RANDOM" | sh
-curl -s --proto-redir -all,https "https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/starship.toml?$RANDOM" --output starship.toml
-[[ ! -f ~/.config/starship.toml ]] || mv -f ~/.config/starship.toml ~/.config/starship.toml.bak
-mv -f starship.toml ~/.config/starship.toml
-
 # download .zshrc & configs
 echo "📥 Downloading zsh assets"
 curl -s --proto-redir -all,https "https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.zshrc?$RANDOM" --output .zshrc.new

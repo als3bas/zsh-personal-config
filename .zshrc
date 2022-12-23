@@ -27,4 +27,3 @@ if ! zplug check; then
 fi
 zplug load
 [[ ! -f ~/.custom-config.zsh ]] || source ~/.custom-config.zsh
-eval "$(starship init zsh)"
