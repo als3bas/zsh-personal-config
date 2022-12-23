@@ -18,6 +18,8 @@ zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "plugins/deno", from:oh-my-zsh
 
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+
 if ! zplug check; then
     printf "Install? [y/N]: "
     if read -q; then
