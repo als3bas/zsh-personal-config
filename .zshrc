@@ -44,6 +44,7 @@ zi load lukechilds/zsh-nvm
 zi snippet OMZP::git
 zi snippet OMZP::node
 zi snippet OMZP::npm
+zi snippet OMZP::gitignore
 zi snippet OMZP::git-extras
 zi snippet OMZL::clipboard.zsh
 zi snippet OMZL::termsupport.zsh
