@@ -46,7 +46,6 @@ zi snippet OMZP::node
 zi snippet OMZP::npm
 zi snippet OMZP::gitignore
 zi snippet OMZP::git-extras
-zi snippet OMZL::clipboard.zsh
 zi snippet OMZL::termsupport.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

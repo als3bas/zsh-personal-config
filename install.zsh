@@ -2,6 +2,10 @@
 echo "📂 Changing directory to ~"
 cd ~
 
+# Install Nanorc
+echo "📂 Installing Nanorc"
+curl -s https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
 # install zinit
 echo "📦 Installing Zinit"
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
