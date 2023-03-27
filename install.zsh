@@ -1,3 +1,6 @@
+# cd to ~
+cd ~
+
 # Check if git is installed, and clone.
 if ! type git > /dev/null 2>&1; then
   echo "Git not installed, please install"
