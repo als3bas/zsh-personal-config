@@ -1,36 +1,30 @@
-## CD to ~
-echo "📂 Changing directory to ~"
-cd ~
+# Check if git is installed, and clone.
+if ! type git > /dev/null 2>&1; then
+  echo "Git not installed, please install"
+  exit 1
+else
+  git clone --depth=1 https://github.com/als3bas/zsh-personal-config.git
+  cd ./zsh-personal-config
+fi
 
-# Install Nanorc
-echo "📂 Installing Nanorc"
-curl -s https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+# Check if zsh is installed
+if ! type zsh > /dev/null 2>&1; then
+  echo "Zsh not installed, please install"
+  exit 1
+fi
 
-# install zinit
-echo "📦 Installing Zinit"
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+# Install zinit
+if ! type zinit > /dev/null 2>&1; then
+  echo "Zinit not installed, installing"
+  bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+fi
 
-# download .zshrc & configs
-echo "📥 Downloading zsh assets"
-curl -s --proto-redir -all,https "https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.zshrc?$RANDOM" --output .zshrc.new
-echo "📥 Downloading custom config"
-curl -s --proto-redir -all,https "https://raw.githubusercontent.com/sebalvaro/zsh-personal-config/main/.custom-config.zsh?$RANDOM" --output .custom-config.zsh.new
+# Install Starship 
+if ! type starship > /dev/null 2>&1; then
+  echo "Starship not found, installing"
+  curl -sS https://starship.rs/install.sh | sh
+fi
 
-# backup old .zshrc
-echo "📦 Backing up old files"
-[[ ! -f .zshrc ]] || mv -f .zshrc .zshrc.old
-[[ ! -f .custom-config.zsh ]] || mv -f .custom-config.zsh .custom-config.zsh.old
-
-# move zshrc
-echo "📤 Moving .zshrc.new to .zshrc"
-mv -f .zshrc.new ~/.zshrc
-mv -f .custom-config.zsh.new ~/.custom-config.zsh
-
-# then exec zsh
-echo "🚀 Running zsh again"
+[[ ! -f ~/.zshrc ]] || rm ~/.zshrc 
+cp custom.zshrc ~/.zshrc
 exec zsh
-
-echo "=============================================="
-echo "🤓 RESTART YOUR TERMINAL TO SEE THE CHANGES"
-echo "🤓 OR RUN 'exec zsh' TO SEE THE CHANGES"
-echo "=============================================="
