@@ -71,4 +71,4 @@ bindkey "^[[3;5~" delete-word
 #                         Launch Starship
 # ----------------------------------------------------------------
 eval "$(starship init zsh)"
-## starship preset tokyo-night > ~/.config/starship.toml
+starship preset tokyo-night > ~/.config/starship.toml
