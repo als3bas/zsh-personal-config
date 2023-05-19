@@ -22,12 +22,6 @@ if ! type zinit > /dev/null 2>&1; then
   bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 fi
 
-# Install Starship 
-if ! type starship > /dev/null 2>&1; then
-  echo "Starship not found, installing"
-  curl -sS https://starship.rs/install.sh | sh
-fi
-
 [[ ! -f ~/.zshrc ]] || rm ~/.zshrc 
 cp custom.zshrc ~/.zshrc
 exec zsh
