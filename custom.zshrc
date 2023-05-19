@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
     command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
@@ -11,7 +18,7 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 
-# ---------------------------------------------------------------- 
+# ----------------------------------------------------------------
 #                          Load Plugins
 # ----------------------------------------------------------------
 
@@ -29,15 +36,13 @@ zi load zsh-users/zsh-completions
 zi load larkery/zsh-histdb
 zi load jirutka/zsh-shift-select
 zi load lukechilds/zsh-nvm
-zi snippet OMZP::git
-zi snippet OMZP::node
-zi snippet OMZP::npm
-zi snippet OMZP::gitignore
-zi snippet OMZP::git-extras
-zi snippet OMZL::termsupport.zsh
+zi load hlissner/zsh-autopair
 
-# ---------------------------------------------------------------- 
-#                          Custom config 
+
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+# ----------------------------------------------------------------
+#                          Custom config
 # ----------------------------------------------------------------
 export EDITOR=nano
 export VISUAL="$EDITOR"
@@ -51,6 +56,9 @@ export CLICOLOR=1
 export HISTFILE=~/.histfile
 export HISTSIZE=1000000
 export SAVEHIST=1000000
+
+## Disable homebrew auto update
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 ## FIX CTRL + ARROW KEYS
 bindkey "\eOc" forward-word
@@ -67,8 +75,5 @@ bindkey "^[[3~" delete-char
 bindkey "^[[3;5~" delete-word
 
 
-# ---------------------------------------------------------------- 
-#                         Launch Starship
-# ----------------------------------------------------------------
-eval "$(starship init zsh)"
-starship preset tokyo-night > ~/.config/starship.toml
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
