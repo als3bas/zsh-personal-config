@@ -1,7 +1,7 @@
 # zsh-personal-config
-My personal zsh config for my systems with zplug
+My personal zsh config for my systems with zinit
 
-# Install zplug
+# Install zinit
 
 ## Requirements
 * Git
